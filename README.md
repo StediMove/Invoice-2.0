@@ -62,7 +62,27 @@ This project is built with:
 
 ## How can I deploy this project?
 
+### Deploy with Lovable
+
 Simply open [Lovable](https://lovable.dev/projects/4c0709b6-b19c-4db6-9535-13daed745380) and click on Share -> Publish.
+
+### Deploy to Vercel
+
+This project is configured for deployment to Vercel. Follow these steps:
+
+1. Push your code to a GitHub repository
+2. Sign up or log in to [Vercel](https://vercel.com)
+3. Create a new project and import your GitHub repository
+4. Vercel will automatically detect the Vite project and configure the build settings
+5. Add the following environment variables in your Vercel project settings:
+   - `VITE_SUPABASE_URL` - Your Supabase project URL
+   - `VITE_SUPABASE_PUBLISHABLE_KEY` - Your Supabase publishable key
+6. Deploy the project
+
+The configuration includes:
+- Proper routing for React Router (SPA fallback)
+- Security headers
+- Optimized build settings
 
 ## Can I connect a custom domain to my Lovable project?
 
