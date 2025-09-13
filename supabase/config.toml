@@ -1,0 +1,21 @@
+project_id = "sbczhprnlejjmdoqbkwz"
+
+[api]
+enabled = true
+port = 54321
+schemas = ["public", "graphql_public"]
+extra_search_path = ["public", "extensions"]
+max_rows = 1000
+
+[auth]
+enabled = true
+site_url = "https://4c0709b6-b19c-4db6-9535-13daed745380.sandbox.lovable.dev"
+additional_redirect_urls = ["https://localhost:3000"]
+jwt_expiry = 3600
+enable_signup = true
+
+[functions.generate-invoice-ai]
+verify_jwt = true
+
+[functions.generate-invoice-pdf]
+verify_jwt = true

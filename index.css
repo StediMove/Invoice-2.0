@@ -1,0 +1,169 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* AI-Powered Invoicing Platform Design System 
+All colors MUST be HSL for consistent theming.
+Inspired by modern fintech platforms with glass morphism and AI aesthetics.
+*/
+
+@layer base {
+  :root {
+    /* Base colors */
+    --background: 0 0% 100%;
+    --foreground: 224 71.4% 4.1%;
+
+    /* Card and surface colors */
+    --card: 0 0% 100%;
+    --card-foreground: 224 71.4% 4.1%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 224 71.4% 4.1%;
+
+    /* Primary brand colors - Professional AI Blue */
+    --primary: 221.2 83.2% 53.3%;
+    --primary-foreground: 210 40% 98%;
+    --primary-glow: 221.2 83.2% 70%;
+
+    /* Secondary colors - Complementary Purple */
+    --secondary: 270 95% 75%;
+    --secondary-foreground: 224 71.4% 4.1%;
+
+    /* Muted and accent colors */
+    --muted: 220 14.3% 95.9%;
+    --muted-foreground: 220 8.9% 46.1%;
+
+    --accent: 220 14.3% 95.9%;
+    --accent-foreground: 220 8.9% 46.1%;
+
+    /* Status colors */
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --success: 142.1 76.2% 36.3%;
+    --success-foreground: 355.7 100% 97.3%;
+
+    --warning: 32.1 94.6% 43.7%;
+    --warning-foreground: 355.7 100% 97.3%;
+
+    /* Border and input colors */
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 221.2 83.2% 53.3%;
+
+    /* AI Platform specific colors */
+    --ai-accent: 271.5 81% 56%;
+    --ai-secondary: 262.1 83.3% 57.8%;
+    --glass-bg: 0 0% 100% / 0.05;
+    --glass-border: 0 0% 100% / 0.1;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--ai-accent)));
+    --gradient-secondary: linear-gradient(135deg, hsl(var(--secondary)), hsl(var(--ai-secondary)));
+    --gradient-glass: linear-gradient(135deg, hsl(var(--glass-bg)), hsl(var(--glass-border)));
+    --gradient-hero: linear-gradient(180deg, hsl(var(--background)), hsl(var(--muted)));
+
+    /* Shadows */
+    --shadow-glass: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    --shadow-card: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --shadow-glow: 0 0 40px hsl(var(--primary) / 0.3);
+
+    /* Border radius */
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Dark mode base colors */
+    --background: 224 71.4% 4.1%;
+    --foreground: 210 20% 98%;
+
+    /* Dark mode surfaces */
+    --card: 224 71.4% 4.1%;
+    --card-foreground: 210 20% 98%;
+
+    --popover: 224 71.4% 4.1%;
+    --popover-foreground: 210 20% 98%;
+
+    /* Dark mode primary - Brighter for contrast */
+    --primary: 221.2 83.2% 53.3%;
+    --primary-foreground: 210 20% 98%;
+    --primary-glow: 221.2 83.2% 60%;
+
+    /* Dark mode secondary */
+    --secondary: 215 27.9% 16.9%;
+    --secondary-foreground: 210 20% 98%;
+
+    /* Dark mode muted and accent */
+    --muted: 215 27.9% 16.9%;
+    --muted-foreground: 217.9 10.6% 64.9%;
+
+    --accent: 215 27.9% 16.9%;
+    --accent-foreground: 210 20% 98%;
+
+    /* Dark mode status colors */
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 20% 98%;
+
+    --success: 142.1 70.6% 45.3%;
+    --success-foreground: 210 20% 98%;
+
+    --warning: 32.1 94.6% 43.7%;
+    --warning-foreground: 210 20% 98%;
+
+    /* Dark mode borders and inputs */
+    --border: 215 27.9% 16.9%;
+    --input: 215 27.9% 16.9%;
+    --ring: 221.2 83.2% 53.3%;
+
+    /* Dark mode AI specific */
+    --ai-accent: 271.5 81% 56%;
+    --ai-secondary: 262.1 83.3% 57.8%;
+    --glass-bg: 255 255 255 / 0.05;
+    --glass-border: 255 255 255 / 0.1;
+
+    /* Dark mode gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--ai-accent)));
+    --gradient-secondary: linear-gradient(135deg, hsl(var(--secondary)), hsl(var(--ai-secondary)));
+    --gradient-glass: linear-gradient(135deg, hsl(var(--glass-bg)), hsl(var(--glass-border)));
+    --gradient-hero: linear-gradient(180deg, hsl(var(--background)), hsl(var(--muted)));
+
+    /* Dark mode shadows */
+    --shadow-glass: 0 8px 32px 0 rgba(31, 38, 135, 0.6);
+    --shadow-card: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    --shadow-glow: 0 0 40px hsl(var(--primary) / 0.4);
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
